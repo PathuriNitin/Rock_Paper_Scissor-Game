@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="rps.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="game-title">
+            ROCK PAPER SCISSOR
+        </div>
+        <div class="icons">
+
+                <button class="game-buttons" onclick="
+                playGame('rock')
+                 ">
+                    <img src="rock-emoji.png" alt="rock-button">
+                </button>
+
+                <button class="game-buttons" onclick="
+                playGame('paper')
+                  ">
+                    <img src="paper-emoji.png" alt="paper-button">
+                </button>
+
+                <button class="game-buttons" onclick="
+                 playGame('scissors')"
+                 >
+                    <img src="scissors-emoji.png" alt="scissor-button">
+                </button>
+        </div>
+        <div class="result-section">
+            <div class="game-winner">
+            </div>
+
+            <div class="game-move">
+            </div>
+
+            <div class="game-score">
+            </div>
+
+        </div>
+
+        <div class="button-reset">
+            <button class="game-reset" onclick="
+                scores.win=0,
+                scores.lose=0,
+                scores.tie=0,
+                displayScore();
+                document.querySelector('.game-winner').innerHTML='',
+                document.querySelector('.game-move').innerHTML='',
+                localStorage.clear();
+           ">
+                reset game</button>
+        </div>
+    </div>
+    <script src="rps.js"></script>
+</body>
+</html>
